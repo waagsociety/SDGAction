@@ -92,8 +92,16 @@ iframe {
   border: none;
 }
 
+header.page {
+  background-image: url(header.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 2.5% center;
+}
+
 header.page h1 {
   font-size: calc(1em + 3vmin);
+  visibility: hidden;
 }
 
 p {
