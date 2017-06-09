@@ -7,6 +7,46 @@
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+nav.page {
+  overflow-y: hidden;
+}
+
+#energy {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
+  opacity: 0;
+  z-index: -10;
+}
+
+#energy:target {
+  opacity: 1;
+  z-index: 10;
+}
+
+nav.page li {
+  display: inline-block;
+  width: 20%;
+}
+
+nav.page li {
+  float: left;
+}
+
+nav.page img {
+  display: block;
+  width: 100%;
 }
 
 html, 
@@ -16,16 +56,24 @@ body {
 }
 
 #map {
-  height: 560px;
+  height: 720px;
   max-height: 80vh;
 }
 
 header.page {
-  background-color: red;
+  font-weight: 800;
+  color: white;
+  background-color: #FCC30B;
 }
 
 header.page h1 {
-  font-size: calc(1em + 2vmin);
+  font-size: calc(1em + 3vmin);
+}
+
+p {
+  max-width: 48em;
+  margin: 1em 0;
+  padding: 0 2.5%;
 }
 
 header.page a {
