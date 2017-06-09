@@ -28,6 +28,14 @@ function valueToColor(value) {
   return 'rgb(' + rgb.join() + ')'
 }
 
+console.log(data)
+
+geojson.features = geojson.features.map(function(feature) {
+  const key = feature.properties.name.replace(/\W+/, '').toLowerCase()
+  feature.properties.score = data[key]
+  return feature
+})
+
 const layer = L.geoJSON(geojson, { 
   style,
   onEachFeature: function(feature, layer) {
@@ -42,9 +50,8 @@ function random(ceiling) {
 }
 
 layer.eachLayer(function(layer) {
-  console.log(valueToColor(random(0, 100)))
   layer.setStyle({
-    color: valueToColor(random(-100, 100)),
+    color: valueToColor(layer.feature.properties.score),
   })
 })
 
