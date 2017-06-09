@@ -38,11 +38,6 @@ geojson.features = geojson.features.map(function(feature) {
 
 const layer = L.geoJSON(geojson, { 
   style,
-  onEachFeature: function(feature, layer) {
-    layer.on('click', function(e) {
-      console.log('whaaaaat')
-    })
-  }
 }).addTo(map)
 
 function random(ceiling) {
