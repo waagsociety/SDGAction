@@ -8,9 +8,9 @@ const options = L.mapboxGL({
 
 options.addTo(map)
 
-map.on('click', function(e) {
-  console.log(e)
-})
+// map.on('click', function(e) {
+//   location.hash = '#province'
+// })
 
 var style = {
   color: "white",
@@ -27,8 +27,6 @@ function valueToColor(value) {
   rgb[index] = 255
   return 'rgb(' + rgb.join() + ')'
 }
-
-console.log(data)
 
 geojson.features = geojson.features.map(function(feature) {
   const key = feature.properties.name.replace(/\W+/, '').toLowerCase()

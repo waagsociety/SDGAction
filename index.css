@@ -18,7 +18,7 @@ nav.page {
   overflow-y: hidden;
 }
 
-#energy {
+section.container {
   background-color: white;
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ nav.page {
   z-index: -10;
 }
 
-#energy:target {
+section.container:target {
   opacity: 1;
   z-index: 10;
 }
@@ -67,7 +67,7 @@ header.page {
 }
 
 figure {
-  height: 500px;
+  height: 560px;
   /*background-image: url(tweedekamer-achtergrond.jpg);*/
   background-size: cover;
 }
@@ -93,15 +93,17 @@ iframe {
 }
 
 header.page {
-  background-image: url(header.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 2.5% center;
+  padding: 0 2.5%;
 }
 
 header.page h1 {
+  background-repeat: no-repeat;
+  background-image: url(header.png);
+  background-size: contain;
   font-size: calc(1em + 3vmin);
-  visibility: hidden;
+  color: transparent;
+  margin-right: 2.5em;
+  padding: 2.5% 0;
 }
 
 p {
@@ -112,7 +114,7 @@ p {
 header.page a {
   float: right;
   padding: 0.625em 1em 0.75em;
-  margin: 0.25em 0 0;
+  margin: 2em 0 0;
   text-decoration: none;
   border: 2px solid white;
   color: white;
